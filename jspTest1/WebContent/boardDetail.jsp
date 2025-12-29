@@ -45,6 +45,7 @@
 			e.printStackTrace();
 		}
 	%>
+	<button onclick = "location.href = 'updateBoardForm.jsp?boardId=<%=boardId %>'">수정하기</button>
 	<button type = button onclick = "location.href='boardList.jsp'">목록으로</button>
 </body>
 </html>

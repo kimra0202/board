@@ -17,7 +17,7 @@
 		Integer userId = (Integer) session.getAttribute("user_id");
 
 		if (userId == null) {
-			System.out.println("로그인 필요");
+			out.println("로그인 필요");
 		}
 		String sql = "INSERT INTO BOARD(user_id, board_title, board_content) VALUES (?, ?, ?)";
 		
