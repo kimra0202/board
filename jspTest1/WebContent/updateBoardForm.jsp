@@ -7,7 +7,7 @@
 <title>수정 페이지</title>
 </head>
 <body>
-	<h1>수정 페이지</h1>
+	<h1>게시글 수정</h1>
 	<form action="updateBoardProcess.jsp" method="post">
 		<div>
 			<input type="hidden" name="boardId"

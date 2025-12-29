@@ -30,20 +30,15 @@
 	<p><%=email%>
 		님, 로그인되었습니다
 	</p>
-
-
+	<button onclick="location.href = 'boardList.jsp'">게시판 이동</button>
 	<%
-	response.sendRedirect("boardList.jsp");
 		} else {
-			System.out.println("로그인 실패");
 	%>
 	<p>로그인 실패</p>
 	<p>이메일, 비밀번호를 확인해 주세요</p>
+	<button onclick="location.href = 'loginForm.jsp'">로그인</button>
 	<%
 		}
 	%>
-
-
-
 </body>
 </html>

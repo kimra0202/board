@@ -14,8 +14,10 @@
 		Integer boardId = Integer.parseInt(request.getParameter("boardId"));
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
+		String userId = (String) session.getAttribute("userId");
 
 		PreparedStatement pstat = null;
+		ResultSet rs = null;
 
 		try {
 			String sql = "UPDATE BOARD SET board_title = ?, board_content = ? WHERE board_id = ?";
@@ -23,8 +25,9 @@
 			pstat.setString(1, title);
 			pstat.setString(2, content);
 			pstat.setInt(3, boardId);
-
+			
 			pstat.executeUpdate();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

@@ -19,6 +19,7 @@
 		if (userId == null) {
 			out.println("로그인 필요");
 		}
+
 		String sql = "INSERT INTO BOARD(user_id, board_title, board_content) VALUES (?, ?, ?)";
 		
 		pstat = conn.prepareStatement(sql);

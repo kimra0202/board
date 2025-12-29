@@ -5,11 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메인 페이지 </title>
+<title>메인 페이지</title>
 </head>
 <style>
 h1 {
-	text-align: center;
+	display: flex;
+	justify-content: center;
 }
 
 .top {
@@ -17,15 +18,22 @@ h1 {
 	top: 10px;
 	right: 10px
 }
+
+p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
 </style>
 <body>
 	<%@ include file="dbConnection.jsp"%>
 	<h1>게시판</h1>
 	<div class="top">
-		<button onclick="location.href='loginForm.jsp'">로그인</button>
-		<button onclick="location.href='registerForm.jsp'">회원가입</button>
+		<jsp:include page="top.jsp" />
 	</div>
 
-	<jsp:include page="/boardList.jsp" />
+	<%-- <jsp:include page="/boardList.jsp" /> --%>
+	<p>로그인 후 확인 가능합니다</p>
 </body>
 </html>

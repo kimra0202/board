@@ -38,7 +38,7 @@ input {
 			<input type="email" name="email" value="" placeholder="이메일">
 		</div>
 		<div>
-			<input type="text" name="pwd" value="" placeholder="비밀번호">
+			<input type="password" name="pwd" value="" placeholder="비밀번호">
 		</div>
 		<div>
 			<input type="submit" value="submit" class = "button">

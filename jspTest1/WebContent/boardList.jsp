@@ -20,7 +20,6 @@ table {
 	top: 50px;
 	right: 10px;
 }
-
 </style>
 </head>
 <body>
@@ -29,7 +28,7 @@ table {
 	<button type=button onclick="location.href='boardWriteForm.jsp'"
 		class="post">게시글 작성</button>
 	<table border="1">
-		<tr class = "list">
+		<tr class="list">
 			<th>번호</th>
 			<th>작성자</th>
 			<th>제목</th>
@@ -38,6 +37,7 @@ table {
 		<%
 			PreparedStatement pstat = null;
 			ResultSet rs = null;
+
 			try {
 				String sql = "SELECT * FROM BOARD JOIN USER USING (USER_ID)";
 				pstat = conn.prepareStatement(sql);
