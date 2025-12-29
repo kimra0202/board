@@ -5,12 +5,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>메인 페이지 </title>
 </head>
+<style>
+h1 {
+	text-align: center;
+}
+
+.top {
+	position: fixed;
+	top: 10px;
+	right: 10px
+}
+</style>
 <body>
 	<%@ include file="dbConnection.jsp"%>
 	<h1>게시판</h1>
-	<jsp:include page="/boardList.jsp" flush="false" />
-	<!-- <button type = button onclick="location.href='boardList.jsp'">게시판 리스트</button> -->
+	<div class="top">
+		<button onclick="location.href='loginForm.jsp'">로그인</button>
+		<button onclick="location.href='registerForm.jsp'">회원가입</button>
+	</div>
+
+	<jsp:include page="/boardList.jsp" />
 </body>
 </html>

@@ -7,17 +7,29 @@
 <meta charset="UTF-8">
 <title>게시판</title>
 <style>
+h1 {
+	text-align: center;
+}
+
 table {
 	border-collapse: collapse;
 }
+
+.post {
+	position: fixed;
+	top: 50px;
+	right: 10px;
+}
+
 </style>
 </head>
 <body>
 	<%@ include file="dbConnection.jsp"%>
-	<button type=button onclick="location.href='boardWriteForm.jsp'">게시글
-		작성</button>
+	<h1>게시판</h1>
+	<button type=button onclick="location.href='boardWriteForm.jsp'"
+		class="post">게시글 작성</button>
 	<table border="1">
-		<tr>
+		<tr class = "list">
 			<th>번호</th>
 			<th>작성자</th>
 			<th>제목</th>
@@ -41,11 +53,12 @@ table {
 		<tr>
 			<td><%=boardId%></td>
 			<td><%=name%></td>
-			<td><a href="boardDetail.jsp?boardId=<%=boardId%>"><%=title%></a></td>
-			<td><%=content%></td>
+			<td class="title"><a href="boardDetail.jsp?boardId=<%=boardId%>"><%=title%></a></td>
+			<td class="content"><%=content%></td>
 			<td><button
 					onclick="location.href = 'updateBoardForm.jsp?boardId=<%=boardId%>'">수정</button></td>
-			<td><button type=button>삭제</button></td>
+			<td><button
+					onclick="location.href = 'DeleteBoard.jsp?boardId=<%=boardId%>'">삭제</button></td>
 		</tr>
 		<%
 			}

@@ -7,6 +7,7 @@
 <title>수정 페이지</title>
 </head>
 <body>
+	<h1>수정 페이지</h1>
 	<form action="updateBoardProcess.jsp" method="post">
 		<div>
 			<input type="hidden" name="boardId"
@@ -16,7 +17,7 @@
 			<input type="text" name="title" value="" placeholder="제목 ">
 		</div>
 		<div>
-			<input type="text" name="content" value="" placeholder="내용">
+			<textarea name="content" rows = "10" cols = "30"></textarea>
 		</div>
 		<div>
 			<button>수정</button>
